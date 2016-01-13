@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Careers</title>
+</head>
+<body>
+    <div id="bodyContainer" ng-app="LoanBazaarApp" ng-controller="CareerCtrl">
+        <b>Careers</b>
+        <div>
+            <div>
+                Name :
+            </div>
+            <div>
+                <input type="text" ng-model="name" />
+            </div>
+        </div>
+        <div>
+            <div>
+                Email :
+            </div>
+            <div>
+                <input type="text" ng-model="email" />
+            </div>
+        </div>
+        <div>
+            <div>
+                Cover Letter :
+            </div>
+            <div>
+                <textarea rows="10" cols="100" ng-model="cover"></textarea>
+            </div>
+        </div>
+        <div>
+            <div>
+                Resume :
+            </div>
+            <div>
+                <input type="file" ng-model="content" />
+            </div>
+        </div>
+    <div>
+        <button id="submit" ng-click="submitresume()">Submit</button>
+    </div>
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/app/career-controller.js"></script>
+</body>
+</html>
