@@ -13,6 +13,21 @@ namespace LoanBazaar.Controllers
             return View();
         }
 
+        public ActionResult Inner()
+        {
+            return View();
+        }
+
+        public ActionResult UnderCons()
+        {
+            return View();
+        }
+
+        public ActionResult ApplyLoan()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -31,5 +46,11 @@ namespace LoanBazaar.Controllers
         {
             return View();
         }
+
+        public ActionResult Banks()
+        {
+            return View();
+        }
+
     }
 }

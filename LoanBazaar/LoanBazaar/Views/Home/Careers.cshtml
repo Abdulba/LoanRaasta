@@ -1,49 +1,61 @@
-﻿<!DOCTYPE html>
+﻿@{
+    ViewBag.Title = "Loan Raasta";
+    Layout = "~/Views/Layout/_Layout.cshtml";
+}
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Careers</title>
-</head>
-<body>
-    <div id="bodyContainer" ng-app="LoanBazaarApp" ng-controller="CareerCtrl">
-        <b>Careers</b>
-        <div>
-            <div>
-                Name :
-            </div>
-            <div>
-                <input type="text" ng-model="name" />
+<!-- content start -->
+<div class="container contentarea" ng-app="LoanBazaarApp" ng-controller="CareerCtrl">
+    <div class="row">
+        <!-- left start -->
+        <div class="col-md-9 col-sm-9 contenttext">
+            <h2>Careers</h2>
+            <div class="col-md-9 col-sm-9 col-xs-12">
+                <form>
+                    <div class="form-group">
+                        <label for="txtName">Name</label>
+                        <input type="text" class="form-control" id="txtName" placeholder="Name" ng-model="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtContact">Contact Number</label>
+                        <input type="text" class="form-control" id="txtContact" placeholder="Contact Number" ng-model="contactNumber">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtEmail">Email address</label>
+                        <input type="email" class="form-control" id="txtEmail" placeholder="Email" ng-model="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtCurrent">Current Working Company</label>
+                        <input type="text" class="form-control" id="txtCurrent" placeholder="Contact Number" ng-model="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtExperience">Total Experience</label>
+                        <input type="text" class="form-control" id="txtExperience" placeholder="Total Experience" ng-model="experience">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fileResume">Upload Resume</label>
+                        <input type="file" id="fileResume" onchange="angular.element(this).scope().getFileDetails(this)">                        
+                        <p class="help-block">Please upload doc, pdf.</p>
+                        <p><progress id="pro" value="0" style="visibility:hidden"></progress></p>
+                    </div>
+
+                    <button id="btnApplyCareers" class="btn btn-lg btn-success" ng-click="applycareers()">Apply</button>
+                </form>
             </div>
         </div>
-        <div>
-            <div>
-                Email :
-            </div>
-            <div>
-                <input type="text" ng-model="email" />
-            </div>
-        </div>
-        <div>
-            <div>
-                Cover Letter :
-            </div>
-            <div>
-                <textarea rows="10" cols="100" ng-model="cover"></textarea>
-            </div>
-        </div>
-        <div>
-            <div>
-                Resume :
-            </div>
-            <div>
-                <input type="file" ng-model="content" />
-            </div>
-        </div>
-    <div>
-        <button id="submit" ng-click="submitresume()">Submit</button>
+        <!-- left start -->
+        <!-- right start -->
+        @*<div class="col-md-3 col-sm-3">
+                <div class="rightbanner">
+                    <h4>CAR LOAN</h4>
+                    <p>Vestibulum posuere orci et ligula imper diet, vitae commodo felis vulputate. In tempus nulla enim.</p>
+                    <div align="center"> <img src="images/ads.jpg" class="img-responsive"></div>
+                    <br />
+                    <a href="#" class="btn btn-danger col-md-12 col-sm-12 col-xs-12">VIEW DETAIL</a>
+                    <div class="clearfix"></div>
+                </div>
+            </div>*@
+        <!-- right start -->
     </div>
-    <script src="~/Scripts/angular.js"></script>
-    <script src="~/Scripts/app/career-controller.js"></script>
-</body>
-</html>
+</div>
+<!-- content end --> 
