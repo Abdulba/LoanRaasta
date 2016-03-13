@@ -262,6 +262,12 @@
     <Content Include="images\bannericon6.gif" />
     <Content Include="images\bannericon7.gif" />
     <Content Include="images\bannericon8.gif" />
+    <Content Include="images\banner\01.jpg" />
+    <Content Include="images\banner\02.jpg" />
+    <Content Include="images\banner\03.jpg" />
+    <Content Include="images\banner\04.jpg" />
+    <Content Include="images\banner\05.jpg" />
+    <Content Include="images\banner\06.jpg" />
     <Content Include="images\bullet.png" />
     <Content Include="images\c.jpg" />
     <Content Include="images\d.jpg" />
@@ -344,6 +350,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Banks.cshtml" />
+    <None Include="Properties\PublishProfiles\Folder.pubxml" />
     <None Include="Properties\PublishProfiles\LoanRaasta.pubxml" />
   </ItemGroup>
   <PropertyGroup>
