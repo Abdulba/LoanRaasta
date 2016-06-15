@@ -3,40 +3,60 @@
     Layout = "~/Views/Layout/_Layout.cshtml";
 }
 
-<!-- Full Page Image Background Carousel Header -->
 <!-- content start -->
 <div class="container contentarea">
-<div class="row">
-	<!-- left start -->
-    <div class="col-md-6 col-sm-6 contenttext">
-    	<h2>Contact Us</h2>
-        <div class="innerbanner"><img src="~/images/innerbannera.jpg" alt="" class="img-responsive img-thumbnail" /></div>
-      <h3>LoanRaasta Services Pvt ltd</h3>
-        <div class="contactbox">
-        	<h4>#256,14th main ,7th sector, H SR Lay out,<br/> Bangalore- 560102.</h4>
+    <div class="row">
+        <!-- left start -->
+        <div class="col-md-12 col-sm-12 contenttext">
+            <h2>Contact Us</h2>
+            <div class="innerbanner"><img src="~/images/innerbannera.jpg" alt="" class="img-responsive img-thumbnail" /></div>
         </div>
-        <div  class="contactbox">
-        <h4><i class="glyphicon glyphicon-earphone green"></i> +91 9108880768</h4>
+        <div class="col-md-6 col-sm-6 contenttext">
+
+            <h3>LoanRaasta Services Pvt ltd</h3>
+            <div class="contactbox">
+                <h4>#256,14th main ,7th sector, H SR Lay out,<br /> Bangalore- 560102.</h4>
+            </div>
+            <div class="contactbox">
+                <h4><i class="glyphicon glyphicon-earphone green"></i> +91 9108880768</h4>
+            </div>
+            <div class="contactbox">
+                <h4><i class="glyphicon glyphicon-envelope green"></i> <a href="mailto:Leadersfinancialserives@outlook.com">Leadersfinancialserives@outlook.com</a></h4>
+            </div>
+
         </div>
-        <div  class="contactbox">
-        <h4><i class="glyphicon glyphicon-envelope green"></i> <a href="mailto:Leadersfinancialserives@outlook.com">Leadersfinancialserives@outlook.com</a></h4>
+        <!-- left start -->
+        <!-- right start -->
+        <div class="col-md-6 col-sm-6">
+            <div>
+                <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:440px;width:100%;'>
+                <div id='gmap_canvas' style='height:440px;width:100%;'></div>
+                <div><small><a href="http://embedgooglemaps.com">									embed google map							</a></small></div>
+                <div><small><a href="http://freedirectorysubmissionsites.com/">reedirectorysubmissionsites.com</a></small></div>
+                <style>
+                    #gmap_canvas img {
+                        max-width: none !important;
+                        background: none !important;
+                    }
+                </style></div>
+                <script type='text/javascript'>
+                    function init_map() {
+                        var myOptions = { zoom: 10, center: new google.maps.LatLng(12.93155727890692, 77.67128862089838), mapTypeId: google.maps.MapTypeId.ROADMAP };
+                        map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+                        marker = new google.maps.Marker({ map: map, position: new google.maps.LatLng(12.93155727890692, 77.67128862089838) });
+                        infowindow = new google.maps.InfoWindow({ content: '<strong>LOANRAASTA SERVICES PVT LTD</strong><br>#256,14th main ,7th sector, H SR Lay out, Bangalore- 560102.<br>' });
+                        google.maps.event.addListener(marker, 'click', function () { infowindow.open(map, marker); });
+                        infowindow.open(map, marker);
+                    }
+                    google.maps.event.addDomListener(window, 'load', init_map);</script>
+            </div>
         </div>
-       
-    </div>
-    <!-- left start -->
-    <!-- right start -->
-    <div class="col-md-6 col-sm-6">
-     	<div>
-       	  <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:440px;width:100%;'><div id='gmap_canvas' style='height:440px;width:100%;'></div><div><small><a href="http://embedgooglemaps.com">									embed google map							</a></small></div><div><small><a href="http://freedirectorysubmissionsites.com/">reedirectorysubmissionsites.com</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(12.93155727890692,77.67128862089838),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(12.93155727890692,77.67128862089838)});infowindow = new google.maps.InfoWindow({content:'<strong>LOANRAASTA SERVICES PVT LTD</strong><br>#256,14th main ,7th sector, H SR Lay out, Bangalore- 560102.<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
-        </div>
-    </div>
-    <!-- right start -->
+        <!-- right start -->
     </div>
 </div>
 <!-- content end -->
-<script>
-    $('.carousel').carousel({
-        interval: 5000 //changes the speed
-    })
-</script>
 
+<script>
+    $('.nav li.active').removeClass('active');
+    $('#menuContact').addClass('active');
+</script>

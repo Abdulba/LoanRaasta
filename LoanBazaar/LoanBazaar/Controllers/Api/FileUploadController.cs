@@ -22,8 +22,8 @@ namespace LoanBazaar.Controllers.Api
                 int iUploadedCnt = 0;
 
                 // DEFINE THE PATH WHERE WE WANT TO SAVE THE FILES.
-                //string sPath = "";
-                //sPath = System.Web.Hosting.HostingEnvironment.MapPath("~/locker/");
+                string sPath = "";
+                sPath = System.Web.Hosting.HostingEnvironment.MapPath("~/locker/");
 
                 System.Web.HttpFileCollection hfc = System.Web.HttpContext.Current.Request.Files;
 
@@ -38,41 +38,9 @@ namespace LoanBazaar.Controllers.Api
                         //if (!File.Exists(sPath + Path.GetFileName(hpf.FileName)))
                         //{
                         //    // SAVE THE FILES IN THE FOLDER.
-                        //    hpf.SaveAs(sPath + Path.GetFileName(hpf.FileName));                            
+                        //    hpf.SaveAs(sPath + Path.GetFileName(hpf.FileName));
                         //    iUploadedCnt = iUploadedCnt + 1;
-                        //}
-
-                        byte[] byteStream = new byte[hpf.ContentLength];
-                        System.IO.Stream fileStream = hpf.InputStream;
-                        // Read the file into the byte array.
-                        fileStream.Read(byteStream, 0, hpf.ContentLength);
-
-                        //WebRequest request = WebRequest.Create("ftp://loanraasta.com/wwwroot/Resumes/" + hpf.FileName);
-                        //request.Method = WebRequestMethods.Ftp.UploadFile;
-                        //request.Credentials = new NetworkCredential("lrws", "D#Kre%klzna");
-                        //Stream reqStream = request.GetRequestStream();
-                        //reqStream.Write(byteStream, 0, byteStream.Length);
-                        //reqStream.Close();
-                        
-                        //using (WebClient client = new WebClient())
-                        //{
-                        //    client.Credentials = new NetworkCredential("lrws", "D#Kre%klzna");
-                        //    client.UploadFile("ftp://loanraasta.com/wwwroot/Resumes/" + hpf.FileName, "STOR", localFilePath);
-                        //}
-                        FtpWebRequest FTPRequest = (FtpWebRequest)FtpWebRequest.Create("ftp://loanraasta.com/wwwroot/Resumes/" + hpf.FileName);
-                        FTPRequest.Credentials = new NetworkCredential("lrws", "D#Kre%klzna");
-                        FTPRequest.KeepAlive = false;
-                        FTPRequest.Method = WebRequestMethods.Ftp.UploadFile;
-                        FTPRequest.UseBinary = true;
-                        FTPRequest.ContentLength = hpf.ContentLength;
-                        FTPRequest.Proxy = null;
-                        using (Stream TempStream = FTPRequest.GetRequestStream())
-                        {
-                            //System.Text.ASCIIEncoding TempEncoding = new System.Text.ASCIIEncoding();
-                            //byte[] TempBytes = TempEncoding.GetBytes(Content);
-                            TempStream.Write(byteStream, 0, byteStream.Length);
-                        }
-                        FTPRequest.GetResponse();
+                        //}                     
                     }
                 }
 

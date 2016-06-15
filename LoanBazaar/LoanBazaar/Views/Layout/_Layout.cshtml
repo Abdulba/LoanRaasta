@@ -8,15 +8,15 @@
     <meta name="author" content="">
     <title>Loan Raasta</title>
 
-    <link href="~/Content/bootstrap.css" rel="stylesheet">
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
     <link href="~/Content/custom.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="~/Content//full-slider.css" rel="stylesheet">
-
+    <link href="~/Content/full-slider.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="~/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&sensor=true"></script>
     <link href='~/fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&sensor=true"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,16 +24,27 @@
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-
     <script type="text/javascript" src="~/Scripts/jquery.js"></script>
     <script type="text/javascript" src="~/Scripts/angular.min.js"></script>
     <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="~/Scripts/app/applyloan-controller.js"></script>
     <script type="text/javascript" src="~/Scripts/app/career-controller.js"></script>
+    <script>
+        //$($('.nav li')[0]).addClass('active');
+        //$('.nav li').click(function () {
+        //    $(this).addClass('active').siblings().removeClass('active');
+        //});
+        //$('#ulMenu li').click(function () {
+        //    $('.nav li.active').removeClass('active');
+        //    $(this).addClass('active');            
+        //});
+    </script>
 </head>
 
 <body>
-    <nav class="navbar navbar-default" role="navigation" style="overflow:visible">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default" role="navigation">
         <!-- top green -->
         <div class="topgreen">
             <div class="container" align="right"><i class="glyphicon glyphicon-earphone"></i> Toll Free: +91 9108880768</div>
@@ -43,46 +54,47 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> 
-                <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> 
-                <span class="icon-bar"></span> </button>
-                <a class="navbar-brand" href="index.html"><img src="~/images/logo.png" alt="" class="img-responsive" /></a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/Home/index"><img src="~/images/logo.png" alt="" class="img-responsive" /></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active"> <a href="/Home/Index">Home</a> </li>
-                    <li> <a href="/Home/ApplyLoan">Apply for loan</a> </li>
-                    <li class="dropdown">
+                <ul class="nav navbar-nav navbar-right" id="ulMenu">
+                    <li id="menuHome" class="active"> <a href="/Home/index">Home</a> </li>
+                    <li id="menuLoan"> <a href="/Home/ApplyLoan">Apply for loan</a> </li>
+                    <li id="menuProducts" class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li> <a href="/Home/Undercons">Personal Loan</a> </li>
-                            <li> <a href="/Home/Undercons">Home Loan</a> </li>
-                            <li> <a href="/Home/Undercons">Mortgage</a> </li>
+                            <li> <a href="/Home/undercons">Personal Loan</a> </li>
+                            <li> <a href="/Home/undercons">Home Loan</a> </li>
+                            <li> <a href="/Home/undercons">Mortgage</a> </li>
                             <li> <a href="/Home/Undercons">Loan against Property</a> </li>
                             <li><a href="/Home/Undercons">Business Loan</a></li>
-                            <li><a href="/Home/Undercons">Merchant Business Loan</a></li>
-                            <li><a href="/Home/Undercons">Education Loan</a></li>
-                            <li><a href="/Home/Undercons">Car Loan ( New Cars and used Cars)</a></li>
-                            <li><a href="/Home/Undercons">Commercial Vehicles Loan</a></li>
-                            <li><a href="/Home/Undercons">Commercial Property Loan</a></li>
                             <li><a href="/Home/Undercons">Site Loan </a></li>
+                            <li><a href="/Home/Undercons">Commercial Vehicles Loan</a></li>
                             <li><a href="/Home/Undercons">Gold Loan</a></li>
                             <li><a href="/Home/Undercons">Loan Against Securities</a></li>
                             <li><a href="/Home/Undercons">Project Approvals</a></li>
                             <li><a href="/Home/Undercons">Project Funding</a></li>
                             <li><a href="/Home/Undercons">Credit Cards</a></li>
+                            <li><a href="/Home/Undercons">Commercial Property Loan</a></li>
+                            <li><a href="/Home/Undercons">Merchant Business Loan</a></li>
+                            <li><a href="/Home/Undercons">Education Loan</a></li>
+                            <li><a href="/Home/Undercons">Car Loan ( New Cars and used Cars)</a></li>
                         </ul>
                     </li>
-                    <li> <a href="/Home/Banks">Our Channel Partners</a> </li>
-                    <li> <a href="/Home/Careers">Careers</a> </li>
-                    <li> <a href="/Home/About">About Us</a> </li>
-                    <li> <a href="/Home/Contact">Contact Us</a> </li>
+                    <li id="menuBanks"> <a href="/Home/banks">Our Channel Partners</a> </li>
+                    <li id="menuCareers"> <a href="/Home/careers">Careers</a> </li>
+                    <li id="menuAbout"> <a href="/Home/about">About Us</a> </li>
+                    <li id="menuContact"> <a href="/Home/contact">Contact Us</a> </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
+            <!-- /.container -->
+            </div>
     </nav>
     @RenderBody()
     <!-- Footer -->
@@ -91,39 +103,40 @@
             <div class="col-md-3 col-sm-6 footerlinks">
                 <h4>COMPANY</h4>
                 <ul>
-                    <li><a href="/Home/Index">Home</a></li>
-                    <li><a href="/Home/ApplyLoan">Apply for loan</a></li>
-                    <li><a href="/Home/Banks">Our Channel Partners</a></li>
-                    <li><a href="/Home/Undercons">Careers</a></li>
-                    <li><a href="/Home/About">About Us</a></li>
-                    <li><a href="/Home/Contact">Contact Us</a></li>
+                    <li><a href="/Home/index">Home</a></li>
+                    <li><a href="/Home/applyloan">Apply for loan</a></li>
+                    <li><a href="/Home/banks">Our Channel Partners</a></li>
+                    <li><a href="/Home/careers">Careers</a></li>
+                    <li><a href="/Home/about">About Us</a></li>
+                    <li><a href="/Home/contact">Contact Us</a></li>
                 </ul>
             </div>
             <div class="col-md-3 col-sm-6 footerlinks">
                 <h4>Products</h4>
                 <ul>
-                    <li><a href="/Home/Undercons">Home Loan</a></li>
-                    <li><a href="/Home/Undercons">Mortgage</a></li>
-                    <li><a href="/Home/Undercons">Loan aganist property</a></li>
-                    <li><a href="/Home/Undercons">Loan against Securities</a></li>
-                    <li><a href="/Home/Undercons">Education Loan</a></li>
-                    <li><a href="/Home/Undercons">Personal Loan</a></li>
+                    <li><a href="/Home/undercons">Home Loan</a></li>
+                    <li><a href="/Home/undercons">Mortgage</a></li>
+                    <li><a href="/Home/undercons">Loan aganist property</a></li>
+                    <li><a href="/Home/undercons">Loan against Securities</a></li>
+                    <li><a href="/Home/undercons">Education Loan</a></li>
+                    <li><a href="/Home/undercons">Personal Loan</a></li>
                 </ul>
             </div>
             <div class="col-md-3 col-sm-6 footerlinks">
                 <h4>&nbsp;</h4>
                 <ul>
-                    <li><a href="/Home/Undercons">Car loans ( New & used cars)</a></li>
-                    <li><a href="/Home/Undercons">Business Loan </a></li>
-                    <li><a href="/Home/Undercons">Project Loan</a></li>
-                    <li><a href="/Home/Undercons">Site Loan</a></li>
-                    <li><a href="/Home/Undercons">Commercial Loan</a></li>
-                    <li><a href="/Home/Undercons">Education Loan</a></li>
+                    <li><a href="/Home/undercons">Car loans ( New & used cars)</a></li>
+                    <li><a href="/Home/undercons">Business Loan </a></li>
+                    <li><a href="/Home/undercons">Project Loan</a></li>
+                    <li><a href="/Home/undercons">Site Loan</a></li>
+                    <li><a href="/Home/undercons">Commercial Loan</a></li>
+                    <li><a href="/Home/undercons">Education Loan</a></li>
                 </ul>
             </div>
             <div class="col-md-3 col-sm-6 footerlinks">
                 <h4>Follow us</h4>
-                <a href="#" class="followus"><i class="fa fa-facebook-square"></i></a>&nbsp;<a href="#" class="followus"><i class="fa fa-twitter-square"></i></a>&nbsp;<a href="#" class="followus"><i class="fa fa-google-plus-square"></i></a><br />
+                <a href="#" class="followus"><i class="fa fa-facebook-square"></i></a>&nbsp;<a href="#" class="followus">
+                <i class="fa fa-twitter-square"></i></a>&nbsp;<a href="#" class="followus"><i class="fa fa-google-plus-square"></i></a><br />
                 <p>
                     Copyright 2015 loanraasta.com<br />
                     All Rights Reserved
@@ -131,12 +144,8 @@
             </div>
         </div>
     </footer>
-    <!-- Footer -->
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <!-- Footer --> 
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
 
     <!-- Script to Activate the Carousel -->
     <script>
@@ -149,7 +158,7 @@
             $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
         }, function () {
             $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
-        });
+        });       
     </script>
 </body>
 </html>

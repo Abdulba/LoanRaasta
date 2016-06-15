@@ -61,20 +61,7 @@ namespace LoanBazaar.Controllers.Api
                 //{
                 //    mm.Attachments.Add(new Attachment(sPath + Path.GetFileName(value.File)));
                 //}
-                string ftpfullpath = "ftp://loanraasta.com/wwwroot/Resumes/" + value.File;
-                using (WebClient request = new WebClient())
-                {
-                    request.Credentials = new NetworkCredential("lrws", "D#Kre%klzna");
-                    byte[] fileData = request.DownloadData(ftpfullpath);
-
-                    System.Net.Mime.ContentType ct = new System.Net.Mime.ContentType(System.Net.Mime.MediaTypeNames.Text.Plain);
-                    Stream stream = new MemoryStream(fileData);
-                    Attachment attachment = new Attachment(stream, ct);
-                    attachment.ContentDisposition.FileName = value.File;
-                    mm.Attachments.Add(attachment);
-                }
                 
-
                 mm.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
 
                 client.Send(mm);

@@ -109,7 +109,7 @@ header {height:310%!important;}
 @media only screen and (min-width :1080px) {header {height:90%!important;} }
 
 .contentarea { padding-top:40px; padding-bottom:30px;}
-.contentarea h2 { font-size:28x;color:#88ba1b; border-bottom:dotted 1px #2c3e50; padding-bottom:8px; text-transform:uppercase; margin-top:0px;}
+.contentarea h2 { font-size:28x;color:#88ba1b;background:url(../images/titleborder.jpg) no-repeat bottom left; padding-bottom:15px;  margin-top:0px;}
 .contentarea h3 { font-size:16x;color:#2c3e50;}
 .contentarea h4 { font-size:28x;color:#2c3e50;padding-bottom:8px;margin-top:0px; line-height:28px;}
 .contenttext p { font-size:13px; line-height:22px; color:#2c3e50; padding-bottom:5px;}
@@ -145,7 +145,7 @@ border-radius: 4px; font-size:15px; font-weight:bold; text-align:center; color:#
 .green { color:#88ca12; font-size:20px; vertical-align:middle}
 
 /*-------------------------hover----------------------*/
-.homebox, .homeboxa, .homeboxb, .homeboxc, .homeboxd, .homeboxe, .homeboxf, .homeboxg, .homeboxh, .homeboxi, .homeboxj, .homeboxk, .homeboxl, .homeboxm, .homeboxn, .homeboxo {background: rgba(255, 255, 255, .8); border:solid 1px #fff;-webkit-border-radius: 4px;
+/*.homebox, .homeboxa, .homeboxb, .homeboxc, .homeboxd, .homeboxe, .homeboxf, .homeboxg, .homeboxh, .homeboxi, .homeboxj, .homeboxk, .homeboxl, .homeboxm, .homeboxn, .homeboxo {background: rgba(255, 255, 255, .8); border:solid 1px #fff;-webkit-border-radius: 4px;
 -moz-border-radius: 4px;
 border-radius: 4px; font-size:15px; font-weight:bold; text-align:center; color:#34495e; margin-bottom:20px; transition: all 0.3s ease 0s; line-height:20px; padding-top:15px;}
 .homebox:hover { background:#88ca12;box-shadow: inset 0 0 0 5px #fff;}
@@ -159,4 +159,11 @@ border-radius: 4px; font-size:15px; font-weight:bold; text-align:center; color:#
 .homeboxh:hover { background:#9478e3;box-shadow: inset 0 0 0 5px #fff;}
 .homeboxi:hover { background:#d370b1;box-shadow: inset 0 0 0 5px #fff;}
 .homeboxj:hover { background:#aab2be;box-shadow: inset 0 0 0 5px #fff;}
-.homeboxk:hover { background:#434a55;box-shadow: inset 0 0 0 5px #fff;}
+.homeboxk:hover { background:#434a55;box-shadow: inset 0 0 0 5px #fff;}*/
+.navbar-default .navbar-brand { height:106px!important}
+.homebox {background: rgba(255, 255, 255, .8); border:solid 1px #fff;-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px; font-size:15px; font-weight:bold; text-align:center; color:#34495e; margin-bottom:20px; transition: all 0.3s ease 0s; line-height:20px; padding-top:15px;}
+.homebox:hover { background:#88ca12;box-shadow: inset 0 0 0 5px #fff;}
+.addressinn i { float:left; width:60px; height:60px;}
+.addressinn p { float:left; font-size:17px;}
